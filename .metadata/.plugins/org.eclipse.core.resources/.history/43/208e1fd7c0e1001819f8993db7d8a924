@@ -1,0 +1,5 @@
+package com.cliff.service;
+
+public interface CustomerService {
+
+}

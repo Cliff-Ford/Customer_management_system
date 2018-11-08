@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper>
+	<!-- 根据输入的客户信息的多少，动态生成查询sql片段 -->
+	<sql id="selectCustomerListWhere">
+		<where>
+			<if test="cust_name != null">
+				cust_name like '%#{cust_name}%'
+			</if>
+			<if test="cust_source != null">
+				cust_source = #{cust_source}
+			</if>
+			<if test="cust_industry != null">
+				cust_industry = #{cust_industry}
+			</if>
+			<if test="cust_level != null">
+				cust_level = #{cust_level}
+			</if>
+		</where>
+	
+	</sql>
+</mapper>

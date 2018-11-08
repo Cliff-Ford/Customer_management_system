@@ -1,0 +1,8 @@
+package com.cliff.dao;
+
+import java.util.List;
+
+public interface Dict {
+	//根据类别代码查询数据字典
+	public List<DictMapper> selectDictByTypeCode(String typecode);
+}

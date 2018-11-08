@@ -1,0 +1,23 @@
+package com.cliff.serviceImpl;
+
+import java.util.List;
+
+import org.omg.CORBA.PRIVATE_MEMBER;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cliff.dao.DictMapper;
+import com.cliff.pojo.Dict;
+import com.cliff.service.DictService;
+
+@Service("dictService")
+public class DictServiceImpl implements DictService{
+
+	@Override
+	public List<Dict> findDictByTypeCode(String typecode) {
+		@Autowired
+		private DictMapper dictMapper;
+		
+	}
+
+}

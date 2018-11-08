@@ -1,0 +1,5 @@
+package com.cliff.interceptor;
+
+public class LoginInterceptor {
+
+}

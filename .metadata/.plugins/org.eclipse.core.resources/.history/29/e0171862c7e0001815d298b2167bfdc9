@@ -1,0 +1,26 @@
+package com.cliff.serviceTest;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.cliff.dao.UserMapper;
+import com.cliff.pojo.User;
+
+public class UserServiceTest {
+	@Test
+	public void findUserTest() {
+		String resource = "classpath:applicationContext.xml";
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(resource);
+		UserMapper userMapper = applicationContext.getBean(UserMapper.class);
+		System.out.println("userMapper : " + userMapper);
+		User t = new User();
+		t.setUser_code("m0001");
+		t.setUser_password("123");
+		System.out.println(t);
+		User user = userMapper.findUser(t);
+		System.out.println(user);		
+		((AbstractApplicationContext)applicationContext).close();
+	}
+}

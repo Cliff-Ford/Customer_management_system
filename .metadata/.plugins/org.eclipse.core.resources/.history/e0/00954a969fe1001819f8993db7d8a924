@@ -1,0 +1,11 @@
+package com.cliff.pojo;
+
+import java.io.Serializable;
+
+/**
+ * @author Cliff_Ford
+ * 持久化CMS数据库中的dict表
+ */
+public class Dict implements Serializable{
+	
+}

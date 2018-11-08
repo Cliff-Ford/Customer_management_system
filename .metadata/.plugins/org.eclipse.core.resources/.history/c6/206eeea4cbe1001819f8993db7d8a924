@@ -1,0 +1,30 @@
+package com.cliff.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.cliff.service.CustomerService;
+import com.cliff.service.DictService;
+
+@Controller
+public class CustomerController {
+	@Autowired
+	private CustomerService customerService;
+	@Autowired
+	private DictService dictService;
+	//客户来源 002
+	@Value("${customer.from.type}")
+	private String FROM_TYPE;
+	//客户行业 001
+	@Value("${customer.industry.type}")
+	private String INDUSTRY_TYPE;
+	//客户级别 006
+	@Value("${customer.level.type}")
+	private String LEVEL_TYPE;
+	//客户列表
+	@RequestMapping("/customerManager/list")
+	public String list()
+	
+}

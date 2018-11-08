@@ -1,0 +1,27 @@
+package com.cliff.serviceImpl;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cliff.common.utils.Page;
+import com.cliff.dao.CustomerMapper;
+import com.cliff.pojo.Customer;
+import com.cliff.service.CustomerService;
+
+
+@Service("customerService")
+public class CustomerServiceImpl implements CustomerService{
+
+	@Autowired
+	private CustomerMapper customerMapper;
+
+	@Override
+	public Page<Customer> findCustomerList(int page, int rows, String custName, String custSource, String custIndustry,
+			String custLevel) {
+		Customer customer = new Customer();
+		if(StringUtils.isNotBlank(custName))) {
+			customer.setCust_name(custName);
+		}
+	}
+}

@@ -1,0 +1,100 @@
+
+
+.down_box{
+	width: 100%;
+}
+
+.match_parent_width{
+	display: block;
+	width: 100%;
+	height: 460px;
+}
+
+
+
+.up_box{
+	margin: 20px 0;
+	display: flex;    
+	height: 50px;    
+	
+}
+.logo_box{
+	width: 50px;
+	background-color: #ff6700;
+}
+
+.up_right_box{
+	margin-left: 20px;
+}
+.title_1{
+	font-size: 25px;    
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.title_2{
+	font-size: 10px;
+	margin-top: -2px;
+}
+
+.my_btn{
+	width: 100%;
+	height: 40px;
+	background-color: orange;
+	border: 1px solid #666;
+	margin-bottom: 30px;
+	color: white;
+}
+.log{
+	width: 348px;
+	height: 460px;
+	background-color: white;
+	position: absolute;
+	right: 7%;
+	top: 90px;
+	padding: 50px 30px;
+}
+
+.log_span1{
+	display: inline-block;
+	font-size: x-large;
+	
+}
+.log_span2{
+	display: inline-block;
+	font-size: x-large;
+	position: relative;
+	left: 95px;
+}
+.orange{
+	color: orange;
+	
+}
+.my_row{
+	margin-bottom: 10px;
+}
+.sign_or_forget{
+	position: relative;
+	left: 35px;
+	
+}
+.pointer{
+	cursor: pointer;
+}
+
+.footer{
+	text-align: center;
+	margin: 10px 0;
+}
+
+.footer_ul{
+	width: 300px;
+	margin: 0 auto;
+	list-style: none;
+	display: flex;
+}
+
+.other_login{
+	position: relative;
+	top: 78px;
+}
+

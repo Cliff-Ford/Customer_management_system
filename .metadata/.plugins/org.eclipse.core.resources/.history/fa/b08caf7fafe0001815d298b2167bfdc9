@@ -1,0 +1,7 @@
+jdbc.driver=com.mysql.cj.jdbc.Driver
+jdbc.url=jdbc:mysql://127.0.0.1/cms?serverTimezone=GMT%2B8
+jdbc.username=root
+jdbc.password=1234
+jdbc.maxTotal=30
+jdbc.maxIdle=10
+jdbc.initialSize=5

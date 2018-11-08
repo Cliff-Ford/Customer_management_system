@@ -1,0 +1,5 @@
+package com.cliff.dao;
+
+public interface CustomerMapper {
+
+}

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Wed Nov 07 17:52:58 CST 2018
+org.eclipse.jst.jee.server\:/binary\:F\:\\Eclipse-Workspace-\ Customer_management_system\\CMS\\WebContent\\WEB-INF\\lib\\spring-web-5.1.0.RELEASE.jar=WEB-INF/lib/spring-web-5.1.0.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:F\:\\Eclipse-Workspace-\ Customer_management_system\\CMS\\WebContent\\WEB-INF\\lib\\spring-web-5.1.0.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.1.0.RELEASE-sources.jar

@@ -1,0 +1,45 @@
+package com.cliff.serviceImpl;
+
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.cliff.dao.UserMapper;
+import com.cliff.pojo.User;
+import com.cliff.service.UserService;
+
+@Service("userService")
+@Transactional
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	private UserMapper userMapper;
+	
+	@Override
+	public User findUser(User t) {		
+		User user = this.userMapper.findUser(t);
+		System.out.println(user);
+		return user;
+	}
+	@Test
+	public void findUserTest() {
+		String resource = "classpath:applicationContext.xml";
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(resource);
+		UserMapper userMapper = applicationContext.getBean(UserMapper.class);
+		System.out.println("userMapper : " + userMapper);
+		User t = new User();
+		t.setUser_code("m0001");
+		t.setUser_password("123");
+		System.out.println(t);
+		User user = userMapper.findUser(t);
+		System.out.println(user);		
+		((AbstractApplicationContext)applicationContext).close();
+	}
+	
+	
+}
